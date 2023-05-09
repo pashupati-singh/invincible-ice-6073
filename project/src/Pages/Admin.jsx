@@ -121,7 +121,17 @@ export default function Admin(){
         FetchData();
      },[])
 
-
+    const handleDelete = (id)=>{
+        axios.delete(`https://6453b750e9ac46cedf2d995b.mockapi.io/api/bikes/bikes?id=${id}`)
+        .then((res)=>{
+            toast({title: 'Deleted SuccessfuL',
+      description: "We've successfully Deleted from item list",
+      status: 'success',
+      duration: 9000,
+      isClosable: true,})
+        })
+    
+    }
 
 
 
@@ -170,13 +180,14 @@ export default function Admin(){
         <Th>Price</Th>
         <Th>Average km/L</Th>
         <Th>Engine cc</Th>
+        <Th>DELETE</Th>
       </Tr>
     </Thead>
    
        
          <Tbody>
          {data.map((ele)=>(
-            <Tr>
+            <Tr key={ele.id}>
          <Td>{ele.id}</Td>
          <Td>{ele.name}</Td>
          <Td>{ele.model}</Td>
@@ -184,6 +195,7 @@ export default function Admin(){
          <Td>{ele.price}</Td>
          <Td>{ele.average}</Td>
          <Td>{ele.engine}</Td>
+         <Td><Button colorScheme='red' variant='link' onClick={()=>handleDelete(ele.id)}>DELETE</Button></Td>
          </Tr>
         ))}
            </Tbody>

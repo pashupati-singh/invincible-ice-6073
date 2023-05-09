@@ -3,6 +3,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 import AllRoutes from './components/AllRoutes';
 import Footer from './Pages/Footer';
+import FilterCategory from './Pages/FilterCategory';
 
 
 function App() {
@@ -27,7 +28,9 @@ function App() {
   return (
     <div className="App">
    <Navbar />
+   <FilterCategory />
    <AllRoutes />
+
    <Footer />
     </div>
   );

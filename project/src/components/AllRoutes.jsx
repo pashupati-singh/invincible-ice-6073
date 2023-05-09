@@ -7,8 +7,7 @@ import Cart from "../Pages/Cart"
 import Login from "../Pages/Login"
 import SingleProductPage from "../Pages/SingleProductPage"
 import Admin from "../Pages/Admin"
-import Product from "../Pages/Product"
-import Logout from "../Pages/Logout";
+import Product from "../Pages/Product";
 
 
 export default function AllRoutes(){
@@ -25,7 +24,6 @@ export default function AllRoutes(){
             <Route path = "/product" element = {<Product />} />
             <Route path = "/admin" element = {<Admin />} />
             <Route path = "/Contact" element = {<Contact />} />
-            <Route path = "/logout" element = {<Logout />} />
             <Route path = "/product/:id" element = {<SingleProductPage />} />
 
         </Routes>

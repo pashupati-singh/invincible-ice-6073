@@ -1,6 +1,6 @@
 import { Box, Stack,Flex} from "@chakra-ui/react";
 import SliderImage from "../components/SlideImage";
-import { Card, CardBody, CardFooter,Image,Heading,Text,Divider,ButtonGroup,Button } from '@chakra-ui/react'
+import { Card, CardBody, CardFooter,Image,Heading,Text,Divider,ButtonGroup,Button,Badge } from '@chakra-ui/react'
 import { useEffect, useState } from "react";
 import axios from "axios";
 import {Link} from "react-router-dom"
@@ -35,7 +35,7 @@ export default function Home(){
             {data.map((ele)=>(
 
            
-        <Card width= "400px">
+        <Card width= "400px" key={ele.id}>
   <CardBody>
     <Image
       src={ele.image}
@@ -45,6 +45,9 @@ export default function Home(){
     />
     <Stack mt='6' spacing='3'>
       <Heading size='md'>{ele.name}</Heading>
+      <Badge ml='1' colorScheme='green'>
+        Best Seller
+      </Badge>
       <Text>
        {ele.description}
       </Text>

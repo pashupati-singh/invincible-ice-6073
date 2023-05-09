@@ -10,7 +10,7 @@ const links = [{path : "/" , text : "Home"},
 {path : "/logout" , text : "Logout"},
 {path : "/admin" , text : "Admin"},
 {path : "/cart" , text : "Cart"},
-{path : "/logout" , text : "Logout"},
+
 ]
 
 
