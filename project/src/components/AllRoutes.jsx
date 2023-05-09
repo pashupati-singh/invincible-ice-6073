@@ -8,6 +8,7 @@ import Login from "../Pages/Login"
 import SingleProductPage from "../Pages/SingleProductPage"
 import Admin from "../Pages/Admin"
 import Product from "../Pages/Product";
+import PrivateRoute from "./PrivateRoute";
 
 
 export default function AllRoutes(){
@@ -21,8 +22,16 @@ export default function AllRoutes(){
             <Route path = "/about"element = {<About />} />
             <Route path = "/Cart" element = {<Cart />} />
             <Route path = "/login" element = {<Login />} /> 
-            <Route path = "/product" element = {<Product />} />
-            <Route path = "/admin" element = {<Admin />} />
+            <Route path = "/product" element = {
+            <PrivateRoute>
+            <Product />
+            </PrivateRoute>
+            } />
+            <Route path = "/admin" element = {
+            <PrivateRoute>
+            <Admin />
+            </PrivateRoute>
+            } />
             <Route path = "/Contact" element = {<Contact />} />
             <Route path = "/product/:id" element = {<SingleProductPage />} />
 

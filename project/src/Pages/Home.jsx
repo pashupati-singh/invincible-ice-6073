@@ -37,6 +37,7 @@ export default function Home(){
            
         <Card width= "400px" key={ele.id}>
   <CardBody>
+   
     <Image
       src={ele.image}
       alt='error'
