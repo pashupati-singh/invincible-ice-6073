@@ -95,6 +95,7 @@ export default function Admin(){
             data : obj
         })
         .then(()=>{
+            FetchData();
             toast({title: 'SuccessfuL',
       description: "You've successfully Added A New Item",
       status: 'success',
@@ -122,7 +123,10 @@ export default function Admin(){
      },[])
 
     const handleDelete = (id)=>{
-        axios.delete(`https://6453b750e9ac46cedf2d995b.mockapi.io/api/bikes/bikes?id=${id}`)
+        fetch(`https://6453b750e9ac46cedf2d995b.mockapi.io/api/bikes/bikes?id=${id}`,{
+            method : "DELETE"
+        })
+        .then((res)=>res.json())
         .then((res)=>{
             toast({title: 'Deleted SuccessfuL',
       description: "We've successfully Deleted from item list",
@@ -130,7 +134,7 @@ export default function Admin(){
       duration: 9000,
       isClosable: true,})
         })
-    
+        FetchData();
     }
 
 

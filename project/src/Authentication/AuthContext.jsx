@@ -11,6 +11,7 @@ export default function AuthContextProvider(props){
     }
 
     const logout = ()=>{
+        alert("Logout successfully")
         setIsAuth(false)
     }
 

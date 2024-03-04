@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was chakraUi with [Create React App](https://reactproject-pashupatinathsingh6-gmailcom.vercel.app/).
 
 ## Available Scripts
 
